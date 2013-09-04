@@ -1,0 +1,18 @@
+.modal-body{
+    text-align: center;
+}
+.modal-body input{
+    text-align: center;
+    width: 20px;
+}
+.label{
+    float: left;
+ }
+.badge{
+    float: right;
+}
+#alert{
+    float: left;
+    margin: 10px 0 0;
+    width: 91%;
+}

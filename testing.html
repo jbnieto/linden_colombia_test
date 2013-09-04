@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
+    <script src="TinCanJS/build/tincan.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/general-functions.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/general-styles.css">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<div class="modal" ng-controller="ctrl">
+    <div class="modal-header">
+        {{head}}
+    </div>
+    <div class="modal-body">
+        <div>
+            {{dig_0}}
+            {{opera}}
+            {{dig_1}}
+            =
+            <input type="number" ng-model="value" name="input" maxlength="3">
+        </div>
+        <div class="progress progress-striped active">
+            <div class="bar bar-success" style="width: {{total}}%;"></div>
+        </div>
+        <span class="label label-info">{{info}}</span>
+        <span class="badge badge-info">{{score}}</span>
+        <div id="alert" ng-show="show_msg" class="alert {{class_msg}}">
+            {{msg}}
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-show="button_0" type="button" ng-click="next()">Siguiente</button>
+        <button class="btn btn-primary" ng-show="button_1" type="button" ng-click="showme()">Ver resultado</button>
+        <button class="btn btn-primary" ng-show="button_2" type="button" ng-click="back()">Volver a operacion</button>
+    </div>
+
+    <!-- progress max="{{total}}" value="{{step}}"></progress -->
+
+</div>
+
+
+
+
+</body></html>
